@@ -1,6 +1,6 @@
 # Gelişmiş Programlama - Öğrenci Bilgi Sistemi
 
-Bu proje, Gelişmiş Programlama dersi kapsamında geliştirilmiş bir Windows Forms uygulamasıdır. Uygulama, öğrenci bilgilerini yönetmek için tasarlanmış bir bilgi sistemidir.
+Bu proje, Advanced Programming dersi kapsamında geliştirilmiş bir Windows Forms uygulamasıdır. Uygulama, öğrenci bilgilerini yönetmek için tasarlanmış bir bilgi sistemidir.
 
 ## 📋 Proje Yapısı
 
