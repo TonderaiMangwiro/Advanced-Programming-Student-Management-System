@@ -108,7 +108,7 @@ Uygulama arayüzü ve özellikler hakkında detaylı bilgi için proje klasörle
 
 ## 👨‍💻 Geliştirici
 
-Bu proje, Gelişmiş Programlama dersi kapsamında akademik amaçlarla geliştirilmiştir.
+Bu proje, Advanced Programming dersi kapsamında akademik amaçlarla geliştirilmiştir.
 
 ## 📄 Lisans
 
